@@ -66,7 +66,7 @@ Route::group(['prefix' => 'lara-admin'],function()
     Route::resource('/forms',dashFormController::class);
 
     //    shop-manage
-    Route::get('/shop-manage',['as'=>'shopManage.index','uses'=>'App\Http\Controllers\admin\shopManage\shopManageController@index']);
+    Route::get('/shop-manage',['as'=>'shopManage.index','uses'=>'App\Http\Controllers\admin\dashShopManageController@index']);
     Route::group(['prefix' => 'shop-manage'],function() {
        Route::resource('/shop-orders',dashShopOrderController::class);
        Route::resource('/shop-customers',dashShopCustomerController::class);

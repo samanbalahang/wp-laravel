@@ -2744,5 +2744,3 @@
             </main>
         </div>
     </div>
-@endsection
-@include('dashboard.layout.footer')

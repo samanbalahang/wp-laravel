@@ -4,10 +4,8 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\admin\posts;
-use Illuminate\Support\Facades\Storage;
 
-class dashPostController extends Controller
+class dashShopManageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,12 +14,7 @@ class dashPostController extends Controller
      */
     public function index()
     {
-        if(posts::exists()){
-            $posts = posts::all();
-            return view("/dashboard/bPosts/allposts",compact("posts"));            
-        }else{
-            return redirect()->route('posts.create');
-        }
+        //
     }
 
     /**
@@ -31,7 +24,7 @@ class dashPostController extends Controller
      */
     public function create()
     {
-        return view("/dashboard/bPosts/createPost");          
+        //
     }
 
     /**
@@ -42,15 +35,7 @@ class dashPostController extends Controller
      */
     public function store(Request $request)
     {
-        $file = $request->file('main_img');
-        $extension = $file->getClientOriginalExtension(); // getting image extension
-        $filename =time().'.'.$extension;
-        $file->move('uploads/posts/', $filename);
-        // dd($request->file('main_img'));   
-        // request()->img->move(public_path('tsst'), request()->main_img);
-        // // Storage::disk('public')->put($request->file('main_img'), "/tsst");
-        // // Storage::disk('public')->put("/tsst",$request->file('main_img'));     
-        // return "done";
+        //
     }
 
     /**

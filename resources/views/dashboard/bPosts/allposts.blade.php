@@ -1,9 +1,14 @@
-<x-dashboardheader/>
+@extends('dashboard.layout.master')
+
+@section("extracss")
+
+
+
+@endsection
 
 <!--Main Navigation-->
-<div class="containerfluid px-3 bg-black">
-    <div class="row">
-        <x-dashboardside/>
+
+@section("main")      
         <div class="col-10 col-md-10 p-0 bg-gray">
             <main class="tab-content" id="A" style="margin-top: 58px">
                 <div class="tab-content" id="myTabContent0">
@@ -31,5 +36,10 @@
                 </div>
             </main>
         </div>
-    </div>
-</div>
+
+@endsection
+@section("extrajs")
+
+
+
+@endsection
